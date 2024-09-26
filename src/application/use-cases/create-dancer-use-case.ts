@@ -8,7 +8,7 @@ export interface Params {
   crew: string;
   country: string;
   rank?: string;
-  status: 'active' | 'inactive' | 'retired'; // Adicionando status
+  status: 'active' | 'inactive' | 'retired'; 
 }
 
 export class CreateDancerUseCase {

@@ -6,5 +6,5 @@ export interface Dancer {
   country: string;
   rank?: string;
   createdAt: string;
-  status: 'active' | 'inactive' | 'retired'; // Adicionando status
+  status: 'active' | 'inactive' | 'retired'; 
 }

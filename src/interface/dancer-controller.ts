@@ -18,7 +18,7 @@ export interface DancerDTO {
   country: string;
   rank?: string;
   createdAt: string;
-  status: 'active' | 'inactive' | 'retired'; // Adicionando status aqui
+  status: 'active' | 'inactive' | 'retired'; 
 }
 
 

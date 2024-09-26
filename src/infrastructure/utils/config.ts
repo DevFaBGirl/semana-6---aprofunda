@@ -12,6 +12,6 @@ export function configureDependencies() {
   const dancerController = new DancerController(createDancerUseCase, listAllDancersUseCase); 
 
   return {
-    dancerController // Alterado de bookController para dancerController
+    dancerController 
   }
 }

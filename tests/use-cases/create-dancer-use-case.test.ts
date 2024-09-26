@@ -37,7 +37,7 @@ describe('CreateDancerUseCase', () => {
     expect(idGeneratorMock.generate).toHaveBeenCalled();
     expect(dancerRepositoryMock.save).toHaveBeenCalledWith({
       id: 'unique-id-123',
-      createdAt: expect.any(String), // Verifica se é uma string, mas não precisa ser uma data específica
+      createdAt: expect.any(String), 
       ...dancerParams
     });
     expect(result).toEqual({
