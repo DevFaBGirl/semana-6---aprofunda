@@ -11,4 +11,11 @@ export class Repository implements DancerRepository {
   findAll(): Dancer[] { 
     return this.dancers;
   }
+
+  delete(id: string): Dancer[] {
+    const filteredDancers = this.dancers.filter(item => item.id !== id)
+    return filteredDancers
+
+  }
+ 
 }
