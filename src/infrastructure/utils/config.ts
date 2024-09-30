@@ -4,6 +4,7 @@ import { IdentifierGenerator } from './id-generator';
 import { DancerController } from '../../interface/dancer-controller'; 
 import { ListAllDancersUseCase } from '../../application/use-cases/list-all-dancers-use-case';
 import { DeleteDancerUseCase } from '../../application/use-cases/delete-dancer-use-case';
+import { UpdateDancerUseCase } from '../../application/use-cases/update-dancer-use-controller';
 
 
 export function configureDependencies() {
@@ -11,8 +12,9 @@ export function configureDependencies() {
   const idGenerator = new IdentifierGenerator();
   const createDancerUseCase = new CreateDancerUseCase(dancerRepository, idGenerator); 
   const listAllDancersUseCase = new ListAllDancersUseCase(dancerRepository); 
+  const updateDancerUseCase = new UpdateDancerUseCase(dancerRepository);
   const deleteDancerUseCase = new DeleteDancerUseCase(dancerRepository);
-  const dancerController = new DancerController(createDancerUseCase, listAllDancersUseCase, deleteDancerUseCase); 
+  const dancerController = new DancerController(createDancerUseCase, listAllDancersUseCase, updateDancerUseCase, deleteDancerUseCase); 
 
   return {
     dancerController 

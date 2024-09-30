@@ -33,12 +33,15 @@ Listagem de todos os dancers criados - imagem 1: ⏬
 
 Listagem de todos os dancers criados - imagem 2: ⏬
 
-![Listagem de todas/os as/os dancers criados 2 ](./assets/list_dancer2.jpg)
+![Listagem de todas/os as/os dancers criados 2 ](./assets/list_dancer2.jpg) 
+
+Atualização de dancer pelo ID - imagem 2: ⏬
+![Atualização de dancer pelo ID ](./assets/update_dancer.jpg)
 
 
-Deletar dancer pelo ID - imagem 3: ⏬
+Dancer deletada/o pelo ID - imagem 3: ⏬
 
-![Listagem de todas/os as/os dancers criados 2 ](./assets/delete_dancer.jpg)
+![Dancer deletada/o pelo ID ](./assets/delete_dancer.jpg)
 
 
 ## O que Estudei Esta Semana:  📚🤓💻

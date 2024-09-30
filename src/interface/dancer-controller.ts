@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { CreateDancerUseCase } from '../application/use-cases/create-dancer-use-case';
 import { ListAllDancersUseCase } from '../application/use-cases/list-all-dancers-use-case';
+import { UpdateDancerUseCase } from '../application/use-cases/update-dancer-use-controller';
 import { DeleteDancerUseCase } from '../application/use-cases/delete-dancer-use-case';
 
 
@@ -28,7 +29,9 @@ export class DancerController {
   constructor(
     private createDancerUseCase: CreateDancerUseCase,
     private listAllDancersUseCase: ListAllDancersUseCase,
+    private updateDancerUseCase: UpdateDancerUseCase,
     private deleteDancerUseCase: DeleteDancerUseCase
+
   ){}
 
   create(req: Request, res: Response) {
@@ -40,6 +43,18 @@ export class DancerController {
   listAll(req: Request, res: Response) {
     const dancers = this.listAllDancersUseCase.execute();
     res.json(dancers);
+  }
+
+  update (req: Request, res: Response) {
+    const params = req.body;
+    const { id } = req.params;
+  
+    // Adicionando log para verificar o conteúdo do body
+    console.log(params);
+  
+    const dancerUpdated = this.updateDancerUseCase.execute(id, params);
+  
+    res.json({ message: `Dancer com ${id} alterado com sucesso`, dancerUpdated });
   }
 
   delete(req: Request, res: Response) {
